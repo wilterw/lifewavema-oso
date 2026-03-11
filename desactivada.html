@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Desactivada</title>
+    <link rel="icon" href="/assets/images/lifewave-favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILOS INTEGRADOS PARA AUTONOMÍA TOTAL --- */
+
+        /* 1. Variables de Diseño Global */
+        :root {
+            --lifewave-dark-blue: #0d2e4f;
+            --lifewave-light-blue: #3c78b4;
+            --lifewave-accent: #87ceeb;
+            --dark-blue-bg: #0b1a33;
+            --text-color-light: #f8f9fa;
+            --card-bg-dark: rgba(20, 38, 70, 0.5);
+            --border-color-dark: rgba(255, 255, 255, 0.1);
+            --shadow-medium: 0 5px 25px rgba(0, 0, 0, 0.2);
+            --border-radius: 12px;
+        }
+
+        /* 2. Estilos Globales y de Fondo */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-blue-bg);
+            overflow-x: hidden;
+        }
+        .background-video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        #bg-video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            filter: brightness(0.4);
+        }
+
+        /* 3. Estilos Específicos de la Página */
+        .disabled-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            text-align: center;
+        }
+        .message-box {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card-bg-dark);
+            padding: 4rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color-dark);
+            box-shadow: var(--shadow-medium);
+            backdrop-filter: blur(10px);
+        }
+        .message-logo {
+            height: 60px;
+            margin-bottom: 2rem;
+        }
+        .message-box h1 {
+            color: var(--lifewave-accent);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        .message-box p {
+            color: var(--text-color-light);
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-video-container">
+        <video autoplay muted loop playsinline preload="auto" id="bg-video">
+            <source src="/assets/video/fondo.mp4" type="video/mp4">
+            Tu navegador no soporta videos de fondo.
+        </video>
+    </div>
+
+    <main class="disabled-container">
+        <div class="message-box">
+            <img src="/assets/images/lifewave-logo.png" alt="LifeWave Logo" class="message-logo">
+            <h1>Página Desactivada</h1>
+            <p>Su página ha sido desactivada automáticamente por nuestro sistema.</p>
+            <p>Si considera que es un error, por favor contacte a su Sponsor.</p>
+        </div>
+    </main>
+
+</body>
+</html>

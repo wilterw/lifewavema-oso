@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productos LifeWave | Catálogo Completo (X39, X49, IceWave y más)</title>
+    <meta name="description" content="Explora el catálogo completo de productos LifeWave. Encuentra parches de fototerapia para energía, alivio del dolor, anti-envejecimiento y control de peso. Compra X39 hoy.">
+    <meta name="keywords" content="productos LifeWave, catálogo LifeWave, comprar X39, comprar IceWave, fototerapia, parches para la salud, bienestar natural">
+
+    <meta property="og:title" content="Catálogo de Productos LifeWave">
+    <meta property="og:description" content="Explora la gama completa de parches de fototerapia para mejorar tu bienestar general.">
+    <meta property="og:image" content="https://lifewaveelite.com/assets/images/para%20redes.jpg">
+    <meta property="og:url" content="https://lifewaveelite.com/productos.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="https://lifewaveelite.com/assets/images/lifewave-favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/site-settings.js"></script>
+    <script src="js/cache-buster.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-style.css"> 
+</head>
+<body>
+    <div class="background-video-container">
+        <video autoplay muted loop playsinline preload="auto" id="bg-video">
+            <source src="https://lifewaveelite.com/assets/video/fondo.mp4" type="video/mp4">
+            Tu navegador no soporta videos de fondo.
+        </video>
+    </div>
+
+    <header id="main-header" class="header"></header>
+
+    <main>
+        <section id="catalogo" class="products">
+            <div class="container">
+                 <div class="section-title" style="padding-top: 6rem;">
+                    <img src="https://lifewaveelite.com/assets/images/lifewave-logo.png" alt="LifeWave Logo" class="section-title-logo">
+                    <h2>Nuestro Catálogo de Productos</h2>
+                    <p>Descubre la gama completa de soluciones que LifeWave tiene para tu bienestar.</p>
+                </div>
+
+                <div id="filtros-container" class="filtros-container">
+                    <div class="filtro-item">
+                        <label for="filtro-categorias">Filtrar por categoría:</label>
+                        <select id="filtro-categorias" class="filtro-select"></select>
+                    </div>
+                    
+                    <div class="filtro-item">
+                        <label for="search-bar">Buscar por nombre:</label>
+                        <input type="text" id="search-bar" class="search-input" placeholder="Escribe aquí...">
+                    </div>
+                </div>
+
+                <div id="catalogo-grid" class="product-display-grid">
+                    </div>
+
+                <div id="paginacion-container" class="paginacion-container">
+                    </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="main-footer" class="footer"></footer>
+
+    <script src="js/template-loader.js" defer></script> 
+    <script src="js/config.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/catalogo-productos.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+/* /negocio/css/style.css */
+:root {
+    --dark-blue-bg: #0b1a33;
+    --text-color-light: #f8f9fa;
+    --lifewave-accent: #87ceeb;
+    --lifewave-light-blue: #3c78b4;
+    --border-radius: 12px;
+    --shadow-medium: 0 5px 25px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-blue-bg);
+    color: var(--text-color-light);
+    overflow-x: hidden;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- VIDEO DE FONDO GENERAL --- */
+.background-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+#bg-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+/* --- Hero Section REESTRUCTURADA --- */
+.hero-section {
+    padding: 5rem 0;
+    text-align: center;
+}
+.hero-logo {
+    max-height: 100px;
+    margin-bottom: 1.5rem;
+}
+.hero-content h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.hero-content p {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    margin-top: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedor del nuevo reproductor */
+.hero-player-container {
+    position: relative;
+    max-width: 960px;
+    margin: 2.5rem auto 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    border: 2px solid var(--lifewave-accent);
+}
+.main-video-player {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botón de activar audio superpuesto */
+.audio-overlay-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    background-color: rgba(135, 206, 235, 0.9);
+    color: var(--dark-blue-bg);
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+.audio-overlay-button:hover {
+    background-color: white;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+.audio-overlay-button svg { width: 24px; height: 24px; }
+
+/* --- Secciones Generales --- */
+.testimonials-section, .channel-cta-section, .motivation-section, .form-section {
+    padding: 5rem 0;
+    background-color: rgba(11, 26, 51, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+/* Ajuste para que las secciones nuevas no tengan tanto padding arriba y abajo si van juntas */
+.testimonials-section { padding-bottom: 2.5rem; }
+.channel-cta-section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.motivation-section { padding-top: 2.5rem; }
+
+
+.testimonials-section h2, .motivation-section h2 { 
+    text-align: center; 
+    font-size: clamp(2rem, 5vw, 2.8rem); 
+    margin-bottom: 1rem; 
+}
+.testimonials-subtitle, .motivation-subtitle { 
+    text-align: center; 
+    font-size: clamp(1.2rem, 3vw, 1.5rem); 
+    color: var(--lifewave-accent); 
+    margin-bottom: 3rem; 
+    font-weight: 600;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Testimonials Section (Vertical Videos) --- */
+.video-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    justify-items: center; 
+}
+.video-card { 
+    width: 100%; 
+    max-width: 320px; 
+    background-color: #000; 
+    border-radius: var(--border-radius); 
+    overflow: hidden; 
+    box-shadow: var(--shadow-medium); 
+    text-align: center; 
+}
+.video-card video { 
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 9 / 16; 
+    object-fit: cover; 
+    display: block; 
+}
+.video-card h4 { 
+    padding: 1rem; 
+    background-color: rgba(20, 38, 70, 0.5); 
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    margin: 0; 
+}
+
+/* --- Motivation Section (Horizontal Videos) --- */
+.motivation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    align-items: flex-start;
+}
+.motivation-video-card {
+    background-color: rgba(20, 38, 70, 0.5);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color-dark);
+}
+.motivation-video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    background-color: #000;
+}
+.motivation-video-card h3 {
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: 600;
+    min-height: 4.5em;
+}
+
+
+/* --- Form Section --- */
+.form-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.form-logo { height: 50px; margin-bottom: 1.5rem; }
+.benefits-content h2 { font-size: 2.2rem; color: var(--lifewave-accent); margin-bottom: 1.5rem; }
+.benefits-content p { line-height: 1.8; margin-bottom: 1rem; }
+.benefits-content ul { list-style: none; padding-left: 0; margin-top: 1.5rem; }
+.benefits-content li { margin-bottom: 1rem; font-size: 1.1rem; }
+.form-wrapper { background-color: rgba(20, 38, 70, 0.5); padding: 2.5rem; border-radius: var(--border-radius); border: 1px solid var(--lifewave-accent); }
+.form-wrapper h3 { font-size: 1.8rem; text-align: center; margin-bottom: 2rem; }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+.form-group input { width: 100%; padding: 0.8rem 1.2rem; background-color: var(--dark-blue-bg); border: 1px solid var(--lifewave-light-blue); border-radius: 8px; color: var(--text-color-light); font-size: 1rem; }
+.submit-button { width: 100%; padding: 1rem; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; background-color: var(--lifewave-light-blue); color: white; border: none; border-radius: 8px; cursor: pointer; transition: var(--transition); }
+.submit-button:hover { background-color: var(--lifewave-accent); color: var(--dark-blue-bg); }
+.section-to-animate { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.section-to-animate.is-visible { opacity: 1; transform: translateY(0); }
+.form-group input::placeholder { color: #8b9bb2; opacity: 0.7; }
+
+/* --- Modals --- */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+.modal-overlay.is-visible { opacity: 1; visibility: visible; }
+.modal-content { background: var(--dark-blue-bg); padding: 2.5rem; border-radius: var(--border-radius); text-align: center; max-width: 500px; width: 90%; border: 1px solid var(--lifewave-accent); position: relative; }
+.modal-logo { height: 50px; margin-bottom: 1.5rem; }
+.modal-content h2 { color: var(--lifewave-accent); margin-bottom: 1rem; }
+.modal-content p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.6; }
+.modal-buttons { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+.modal-button { display: block; padding: 1rem; border-radius: 8px; text-decoration: none; font-size: 1.1rem; font-weight: 600; transition: var(--transition); }
+.modal-button.primary { background-color: #25D366; color: white; }
+.modal-button.primary:hover { background-color: #1EBE57; }
+.modal-button.secondary { background-color: var(--lifewave-light-blue); color: white; }
+.modal-button.secondary:hover { background-color: var(--lifewave-accent); color: var(--dark-blue-bg); }
+#exit-intent-modal .form-group { margin-bottom: 1rem; }
+#exit-intent-modal h2 { font-size: 1.8rem; }
+.close-button { position: absolute; top: 10px; right: 15px; background: none; border: none; color: var(--text-color-light); font-size: 2rem; font-weight: 600; cursor: pointer; line-height: 1; }
+
+@media (max-width: 992px) { 
+    .form-container { grid-template-columns: 1fr; } 
+    .motivation-grid { grid-template-columns: 1fr; }
+}
+
+/* --- ESTILOS PARA EL LLAMADO A LA ACCIÓN DEL CANAL REINCORPORADOS --- */
+.channel-cta-section {
+    background-color: #0d2e4f;
+}
+.channel-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--border-color-dark);
+    transition: var(--transition);
+}
+.channel-link:hover {
+    transform: translateY(-5px);
+    background-color: rgba(60, 120, 180, 0.3);
+    border-color: var(--lifewave-accent);
+}
+.channel-link img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 25px;
+}
+.channel-link p {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    color: var(--text-color-light);
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+}
+.channel-link span {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #25D366;
+    color: white;
+    font-weight: 700;
+    border-radius: 50px;
+    text-transform: uppercase;
+}

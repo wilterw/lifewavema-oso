@@ -1,0 +1,33 @@
+/* css/testimonios-style.css */
+
+#testimonios-grid {
+    padding-bottom: 5rem;
+}
+
+.video-grid {
+    display: grid;
+    /* Crea 3 columnas en escritorio, 2 en tablet y 1 en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.video-card {
+    width: 100%;
+    max-width: 320px; /* Ancho máximo para mantener la estética de móvil */
+    aspect-ratio: 9 / 16; /* Proporción vertical 9:16 */
+    background-color: #000;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    border: 1px solid var(--border-color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra el contenedor sin distorsionarse */
+}

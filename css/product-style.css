@@ -1,0 +1,28 @@
+/* ================================================== */
+/* ===  ESTILOS PARA PÁGINA DE DETALLE DE PRODUCTO === */
+/* ================================================== */
+.product-page { padding-top: 100px; }
+.product-hero { padding: 5rem 0; background-color: transparent; }
+.product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start; }
+.product-gallery .main-image img { width: 100%; border-radius: var(--border-radius); box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1px solid var(--border-color-dark); }
+.thumbnail-images { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1rem; }
+.thumbnail-images img { width: 100%; border-radius: 8px; cursor: pointer; border: 2px solid var(--border-color-dark); transition: var(--transition); }
+.thumbnail-images img.active, .thumbnail-images img:hover { border-color: var(--lifewave-accent); transform: scale(1.05); }
+.sales-highlight { background-color: var(--lifewave-light-blue); color: var(--text-color-light); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; font-weight: 700; display: inline-block; margin-bottom: 1.5rem; }
+.product-details h1 { font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem; }
+.product-subtitle { font-size: 1.4rem; font-weight: 400; margin-bottom: 1.5rem; }
+.product-description { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; }
+.key-benefits h3 { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border-color-dark); color: var(--text-color-light); }
+.key-benefits ul { list-style: none; padding: 0; }
+.key-benefits li { display: flex; align-items: center; gap: 1rem; font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-color-light); }
+.benefit-icon { font-size: 1.5rem; color: var(--lifewave-accent); }
+.call-to-action { margin-top: 2rem; text-align: center; background-color: var(--card-bg-dark); border: 1px solid var(--border-color-dark); padding: 2.5rem; border-radius: var(--border-radius); }
+.call-to-action p { font-size: 1.2rem; font-weight: 600; margin: 0 0 1rem; color: var(--text-color-light); }
+.product-info-extra { padding: 6rem 0; background-color: rgba(0,0,0,0.15); }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.info-card { background: var(--card-bg-dark); border: 1px solid var(--border-color-dark); padding: 2.5rem; border-radius: var(--border-radius); text-align: center; }
+.info-card h3 { font-size: 1.4rem; min-height: 3.5em; color: var(--text-color-light); }
+
+/* Responsive */
+@media (max-width: 992px) { .product-layout { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .product-details h1 { font-size: 2.5rem; } .product-subtitle { font-size: 1.2rem; } }

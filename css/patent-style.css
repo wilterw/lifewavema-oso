@@ -1,0 +1,62 @@
+/* css/patent-style.css */
+
+/* Estilos para la tabla de datos de la patente */
+.data-table {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.data-table td {
+    padding: 1rem;
+    background: rgba(0,0,0,0.2);
+}
+
+.data-table .label {
+    font-weight: 700;
+    color: var(--text-color-light);
+    width: 30%;
+    border-right: 2px solid var(--lifewave-accent);
+}
+
+/* Estilos específicos para el Hero de la página de la patente */
+.patent-hero .hero-content {
+    padding-top: 2rem;
+}
+
+/* ================================================== */
+/* ===    REGLAS RESPONSIVE PARA PÁGINA PATENTE   === */
+/* ================================================== */
+@media (max-width: 768px) {
+    .patent-hero h1 {
+        font-size: 2.2rem; /* Reduce el tamaño del título principal en móvil */
+        line-height: 1.2;
+    }
+
+    .comp-plan-card {
+        padding: 1.5rem; /* Reduce el padding en las tarjetas en móvil */
+    }
+
+    .data-table .label, 
+    .data-table td {
+        display: block; /* Hace que las celdas se comporten como bloques */
+        width: 100%;
+        border-right: none;
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .data-table .label {
+        background-color: transparent;
+        padding-bottom: 0.25rem;
+        padding-left: 0;
+        font-weight: bold;
+        border-bottom: 1px solid var(--border-color-dark);
+        margin-bottom: 0.5rem;
+    }
+
+    .data-table td {
+        margin-bottom: 1.5rem;
+        border-radius: var(--border-radius);
+    }
+}

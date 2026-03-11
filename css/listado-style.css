@@ -1,0 +1,113 @@
+/* css/listado-style.css */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color-light);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: transparent; /* El fondo lo da el video */
+}
+
+.header {
+    background-color: rgba(11, 26, 51, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color-dark);
+}
+
+.header img {
+    height: 50px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--lifewave-accent);
+    margin-bottom: 2rem;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 1000px;
+    overflow-x: auto;
+    background-color: rgba(13, 46, 79, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--lifewave-accent);
+    box-shadow: 0 0 20px rgba(135, 206, 235, 0.1);
+}
+
+.leads-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leads-table th, .leads-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color-dark);
+}
+
+.leads-table thead th {
+    background-color: rgba(60, 120, 180, 0.2);
+    color: var(--lifewave-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+.leads-table tbody tr:hover {
+    background-color: rgba(135, 206, 235, 0.1);
+}
+
+.leads-table tbody td {
+    color: var(--text-color-light);
+}
+
+.leads-table tbody td a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* --- CORRECCIÓN DE ESTILOS PARA EL ESTATUS --- */
+.leads-table .status-en-linea {
+    color: #25D366 !important; /* Verde */
+    font-weight: bold;
+}
+
+.leads-table .status-en-construccion {
+    color: #dc3545 !important; /* Rojo */
+    font-weight: bold;
+}
+
+.footer {
+    background-color: rgba(11, 26, 51, 0.8);
+    color: var(--text-color-medium);
+    font-size: 12px;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color-dark);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
