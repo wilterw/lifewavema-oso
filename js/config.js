@@ -17,7 +17,7 @@ const affiliateData = {
     affiliateLink: "https://lifewave.com/tuli70/enrollment/EnrollerSelection?market=MX",
     
     // NUEVA VARIABLE: Enlace al grupo de WhatsApp de la comunidad
-    whatsappGroup: "https://chat.whatsapp.com/KYaMqXtYs6gJ70A4ntAN75?mode=ems_copy_t"
+    whatsappGroup: "https://chat.whatsapp.com/DBHtBywyKmwIv6exUA2VtW?mode=gi_t"
 };
 
 // ----------------------------------------------------
