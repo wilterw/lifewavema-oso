@@ -8,7 +8,7 @@ const affiliateData = {
     name: "Juan Mañoso",
 
     // Coloca el número de WhatsApp (solo números, sin '+' ni espacios)
-    whatsapp: "34609868835",
+    whatsapp: "34622254604",
     
     // Coloca el Correo Electronico Aqui
      email: "ventajasjfg@gmail.com",
